@@ -1,0 +1,15 @@
+.d-flex{
+    margin-left: auto;
+}
+
+.form-control, .btn{
+    margin-left:5px;
+}
+
+.dropdown{
+    margin-left: auto;
+}
+
+.dropdown-toggle, .dropdown-item{
+    cursor: pointer;
+}

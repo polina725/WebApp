@@ -17,6 +17,9 @@
               <a class="nav-link" routerLink='/messages' routerLinkActive='actve'>Messages</a>
             </li>
           </ng-container>
+          <li class="nav-item">
+            <a class="nav-link" routerLink='/errors' routerLinkActive='actve'>Errors</a>
+          </li>
         </ul>
 
         <div *ngIf="(accountService.currentUser$ | async) as user" class="dropdown" dropdown>

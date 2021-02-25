@@ -1,3 +1,4 @@
+using System;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,7 @@ namespace API.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
+            //await Seed.SeedUsers(_context);
             var user = await _context.Users.SingleOrDefaultAsync(user => user.UserName == loginDto.UserName);
 
             if(user == null)

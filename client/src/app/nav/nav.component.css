@@ -3,6 +3,7 @@
 }
 
 .form-control, .btn{
+    margin:auto;
     margin-left:5px;
 }
 

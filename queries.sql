@@ -1,8 +1,4 @@
-INSERT INTO [WebAppDb].[dbo].[Photos] ([AppUserId], [Url], [IsMain]) VALUES (1, 'https://randomuser.me/api/portraits/women/54.jpg', 1)
+DELETE FROM [WebAppDb].[dbo].[Users] WHERE Id = 11;
 
-SELECT TOP (1000) [Id]
-      ,[Url]
-      ,[IsMain]
-      ,[PublicId]
-      ,[AppUserId]
-  FROM [WebAppDb].[dbo].[Photos]
+SELECT TOP (1000) *
+  FROM [WebAppDb].[dbo].[Users]

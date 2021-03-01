@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,7 +54,7 @@ namespace API.Controllers
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
             //await Seed.SeedUsers(_context);
-            var user = await _context.Users.SingleOrDefaultAsync(user => user.UserName == loginDto.UserName);
+            var user = await _context.Users.Include(p => p.Photo).SingleOrDefaultAsync(user => user.UserName == loginDto.UserName); //userRepository????
 
             if(user == null)
                 return Unauthorized("Invalig login");
@@ -70,7 +71,8 @@ namespace API.Controllers
 
             return new UserDto{
                 UserName = user.UserName,
-                Token = _tokenService.CreateToken(user)
+                Token = _tokenService.CreateToken(user),
+                PhotoUrl = user.Photo.FirstOrDefault(photo => photo.IsMain)?.Url
             };
         }
     }

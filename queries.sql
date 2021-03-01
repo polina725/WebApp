@@ -1,4 +1,4 @@
-DELETE FROM [WebAppDb].[dbo].[Users] WHERE Id = 11;
+DELETE FROM [WebAppDb].[dbo].[Users] WHERE Id = 12;
 
 SELECT TOP (1000) *
   FROM [WebAppDb].[dbo].[Users]

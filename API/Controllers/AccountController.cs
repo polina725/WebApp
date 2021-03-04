@@ -61,7 +61,6 @@ namespace API.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
-            //await Seed.SeedUsers(_context);
             var user = await _context.Users.Include(p => p.Photo).SingleOrDefaultAsync(user => user.UserName == loginDto.UserName); //userRepository????
 
             if (user == null)

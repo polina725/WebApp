@@ -1,4 +1,4 @@
-DELETE FROM [WebAppDb].[dbo].[Users] WHERE Id = 12;
+DELETE FROM [WebAppDb].[dbo].[Messages] WHERE Id = 7;
 
 SELECT TOP (1000) *
-  FROM [WebAppDb].[dbo].[Likes]
+  FROM [WebAppDb].[dbo].[Messages]

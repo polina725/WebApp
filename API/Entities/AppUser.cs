@@ -1,18 +1,12 @@
 using System;
 using System.Collections.Generic;
-using API.Extensions;
+using Microsoft.AspNetCore.Identity;
 
 namespace API.Entities
 {
 
-    public class AppUser
+    public class AppUser : IdentityUser<int>
     {
-        public int Id { get; set; }
-
-        public string UserName { get; set; }
-
-        public byte[] PasswwordHash {get; set;}
-
         public byte[] PasswordSalt {get; set;} 
 
         public DateTime DateOfBirth { get; set; }
@@ -44,5 +38,7 @@ namespace API.Entities
         public ICollection<Message> SentMessages { get; set; }
 
         public ICollection<Message> ReceivedMessages { get; set; }
+
+        public ICollection<AppUserRole> UserRoles { get; set; }
     }
 }

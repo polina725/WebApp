@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { findEndOfBlock } from '@angular/localize/src/utils';
 import { FileUploader } from 'ng2-file-upload';
 import { take } from 'rxjs/operators';
 import { Member } from 'src/app/_models/member';

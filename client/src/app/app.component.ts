@@ -26,5 +26,4 @@ export class AppComponent implements OnInit{
       this.presence.createHubConnection(user);
     }
   }
-
 }

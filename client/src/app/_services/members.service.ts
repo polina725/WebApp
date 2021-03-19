@@ -4,7 +4,6 @@ import { of } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Member } from '../_models/member';
-import { PaginatedResult } from '../_models/pagination';
 import { User } from '../_models/user';
 import { UserParams } from '../_models/userParams';
 import { AccountService } from './account.service';
@@ -21,13 +20,14 @@ export class MembersService {
   userParams: UserParams;
 
   constructor(private http: HttpClient, private accountService: AccountService) { 
-    this.accountService.currentUser$.pipe(take(1)).subscribe(user => {
-      this.user = user;
-      this.userParams = new UserParams(user);
-    })
+    this.getUserAndUserParams();
   }
 
   getUserParams(){
+    let user = JSON.parse(localStorage.getItem('user'));
+    if(user.userName !== this.user.userName){
+      this.getUserAndUserParams();
+    }
     return this.userParams;
   }
 
@@ -40,12 +40,18 @@ export class MembersService {
     return this.userParams;
   }
 
+  private getUserAndUserParams(){
+    this.accountService.currentUser$.pipe(take(1)).subscribe(user => {
+      this.user = user;
+      this.userParams = new UserParams(user);
+    })
+  }
+
   getMembers(userParams?: UserParams){
     var res = this.memberCache.get(Object.values(userParams).join('-'));
     if(res){
       return of(res);
     }
-
     let params = getPaginationHeaders(userParams.pageNumber, userParams.pageSize);
 
     params = params.append('minAge', userParams.minAge.toString());

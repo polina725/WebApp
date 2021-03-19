@@ -11,7 +11,7 @@
                 class="form-check-input"
                 [checked]="role.checked"
                 (change)="role.checked = !role.checked"
-                [disabled]="role.name === 'Admin' && user.username == 'admin'"
+                [disabled]="(role.name === 'Admin' && user.username == 'admin') "
             >
             <label>{{role.name}}</label>
         </div>        

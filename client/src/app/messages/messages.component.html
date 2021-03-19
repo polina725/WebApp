@@ -37,7 +37,7 @@
             routerLink='{{container === "Outbox"
                 ? "/members/" + message.recipientUsername
                 : "/members/" + message.senderUsername}}' [queryParams]='{tab: 3}'>
-            <td>{{message.content}}</td>
+            <td style="word-break: break-word;">{{message.content}}</td>
             <td>
                 <div *ngIf="container === 'Outbox'">
                     <img src="{{message.recipientPhotoUrl || './assests/user.png'}}" 
@@ -60,12 +60,12 @@
     </table>
 </div>
 
-<div class="d-flex justify-content-center" *ngIf="pagination && !loading && messages?.length !== 0">
+<div class="d-flex justify-content-center" *ngIf="pagination && messages?.length !== 0">
     <pagination [boundaryLinks]="true" 
                 [totalItems]="pagination.totalItems"
                 [itemsPerPage]="pagination.itemsPerPage"
-                [(ngModel)]="pagination.currentPage"
-                (pageChanged)="currentPage = $event.page;pageChanged($event)"
+                [(ngModel)]="currentPage"
+                (pageChanged)="pageChanged($event)"
                 previousText="&lsaquo;" 
                 nextText="&rsaquo;" 
                 firstText="&laquo;" 

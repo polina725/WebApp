@@ -3,31 +3,35 @@
 </div>
 
 <div class="container mt-3">
-    <form #form="ngForm" class="form-inline mb-3" (ngSubmit)="loadMembers()" autocomplete="off">
-        <div class="from-group">
+    <form #form="ngForm" class="form-inline mb-3" (ngSubmit)="loadMembers()" autocomplete="off" style="align-items: flex-end;">
+        <div class="from-group mr-2">
             <label>Age from: </label>
             <input type="number" 
-                    class="from-control ml-1" 
+                    class="form-control ml-1" 
                     style="width: 70px;" 
                     name="minAge" 
                     [(ngModel)]="userParams.minAge">
         </div>
-        <div class="from-group">
+        <div class="from-group mr-2">
             <label>Age to: </label>
             <input type="number" 
-                    class="from-control px-2" 
+                    class="form-control px-2" 
                     style="width: 70px;" 
                     name="maxAge" 
                     [(ngModel)]="userParams.maxAge">
         </div>
-        <div class="from-group">
+        <div class="from-group mr-4">
             <label>Show: </label>
-            <select name="gender" id="" class="form-control ml-1" [(ngModel)]="userParams.gender">
+            <select name="gender" id="" class="form-control ml-1 custom-select" [(ngModel)]="userParams.gender">
                 <option *ngFor="let gender of genderList" [value]="gender.value" >{{gender.display}}</option>
             </select>
         </div>
-        <button class="btn btn-primary ml-1" type="submit">Aplly filters</button>
-        <button (click)="resetFilters()" class="btn btn-info ml-1" type="submit">Reset filters</button>
+
+        <div class="form-group">
+            <button class="btn btn-primary ml-1" type="submit">Aplly filters</button>
+            <button (click)="resetFilters()" class="btn btn-info ml-1" type="submit">Reset filters</button>  
+        </div>
+        
 
         <div class="col">
             <div class="btn-group float-right">

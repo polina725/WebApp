@@ -38,6 +38,8 @@ namespace API.Controllers
         [HttpPost("edit-roles/{username}")]
         public async Task<ActionResult> EditRoles(string username, [FromQuery]string roles)
         {
+            if(roles == null)
+                return BadRequest("User must have at least 1 role");
             var selectedRoles = roles.Split(",").ToArray();
 
             var user = await _userManager.FindByNameAsync(username);

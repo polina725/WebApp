@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Photo } from 'src/app/_models/photo';
 import { AdminService } from 'src/app/_services/admin.service';
 
@@ -12,7 +11,7 @@ export class PhotoManagmentComponent implements OnInit {
   photos: Photo[];
   //bdModalRef: BsModalRef;
 
-  constructor(private adminService: AdminService, private modalService: BsModalService) { }
+  constructor(private adminService: AdminService) { }
 
   ngOnInit(): void {
     this.getPhotosForApproval();

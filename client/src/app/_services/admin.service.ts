@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Photo } from '../_models/photo';
 import { User } from '../_models/user';

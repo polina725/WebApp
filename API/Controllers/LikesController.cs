@@ -45,7 +45,7 @@ namespace API.Controllers
 
             sourceUser.LikedUsers.Add(userLike);
 
-            if (await _unitOfWork.Complete()) ////
+            if (await _unitOfWork.Complete())
                 return Ok();
 
             return BadRequest("Failed to like user");

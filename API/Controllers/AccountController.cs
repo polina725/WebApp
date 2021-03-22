@@ -1,14 +1,9 @@
-using System;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
-using API.Data;
 using API.DTOs;
 using API.Entities;
 using API.Interfaces;
 using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -69,7 +64,7 @@ namespace API.Controllers
         {
             var user = await _userManager.Users
                 .Include(p => p.Photo)
-                .SingleOrDefaultAsync(user => user.UserName == loginDto.UserName.ToLower()); //userRepository????
+                .SingleOrDefaultAsync(user => user.UserName == loginDto.UserName.ToLower()); 
 
             if (user == null)
                 return Unauthorized("Invalig login");

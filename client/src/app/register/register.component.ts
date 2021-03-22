@@ -16,8 +16,7 @@ export class RegisterComponent implements OnInit {
   maxDate: Date;
   validationErrors: string[] = [];
 
-  constructor(private accountService : AccountService, private toastr: ToastrService,
-              private fb: FormBuilder, private router: Router) { }
+  constructor(private accountService : AccountService, private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.intitializeForm();

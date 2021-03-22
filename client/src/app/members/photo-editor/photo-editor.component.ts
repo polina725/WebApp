@@ -48,10 +48,11 @@ export class PhotoEditorComponent implements OnInit {
       file.withCredentials = false;
     }
 
-    this.uploader.onSuccessItem = (item, response,status, headers) =>{
+    this.uploader.onSuccessItem = (item, response, status, headers) =>{
       if(response){
         const photo: Photo = JSON.parse(response);
         this.member.photo.push(photo);
+        console.log(photo);
         if(photo.isMain){
           this.user.photoUrl = photo.url;
           this.member.photoUrl = photo.url;

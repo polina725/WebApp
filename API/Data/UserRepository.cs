@@ -71,7 +71,7 @@ namespace API.Data
 
         public async Task<AppUser> GetUserByUserNameAsync(string name)
         {
-            return await _dataContext.Users.Include(p => p.Photo).SingleOrDefaultAsync(user => user.UserName == name);
+            return await _dataContext.Users.Include(p => p.Photo).IgnoreQueryFilters().SingleOrDefaultAsync(user => user.UserName == name);
         }
 
         public async Task<string> GetUserGender(string username)

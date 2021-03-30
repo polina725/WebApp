@@ -13,12 +13,11 @@ namespace API.Controllers
     [Authorize]
     public class MessagesController : BasicController
     {
-        private readonly IMapper _mapper;
         private readonly IUnitOfWork _unitOfWork;
-        public MessagesController(IUnitOfWork unitOfWork, IMapper mapper)
+
+        public MessagesController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
         }
 
         [HttpGet]

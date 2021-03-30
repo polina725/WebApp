@@ -11,13 +11,7 @@
         "Interests": "Sit sit incididunt proident velit.",
         "City": "Greenbush",
         "Country": "Martinique",
-        "Photo": [
-            {
-                "Url": "https://randomuser.me/api/portraits/women/54.jpg",
-                "IsMain": true, 
-                "IsApproved": true
-            }
-        ]
+	      "PasswordHash": "lol"
     },
     {
         "UserName": "Karen",
@@ -31,6 +25,7 @@
         "Interests": "Dolor aliquip velit amet aliqua minim labore sit laboris non aliquip cillum.",
         "City": "Celeryville",
         "Country": "Grenada",
+	      "PasswordHash": "lol",
         "Photo": [
             {
                 "Url": "https://randomuser.me/api/portraits/women/50.jpg",
@@ -51,6 +46,7 @@
         "Interests": "Commodo do eiusmod quis labore est non.",
         "City": "Rosewood",
         "Country": "Svalbard and Jan Mayen Islands",
+	       "PasswordHash": "lol",
         "Photo": [
             {
                 "Url": "https://randomuser.me/api/portraits/women/14.jpg",
@@ -71,6 +67,7 @@
         "Interests": "Duis in est laboris anim pariatur incididunt mollit laboris ea velit aliquip cillum.",
         "City": "Orviston",
         "Country": "Zimbabwe",
+	"PasswordHash": "lol",
         "Photo": [
             {
                 "Url": "https://randomuser.me/api/portraits/women/11.jpg",
@@ -91,6 +88,7 @@
         "Interests": "Elit Lorem aliquip deserunt cupidatat ex aliquip ullamco.",
         "City": "Germanton",
         "Country": "Antigua and Barbuda",
+	"PasswordHash": "lol",
         "Photo": [
             {
                 "Url": "https://randomuser.me/api/portraits/women/84.jpg",
@@ -111,6 +109,7 @@
         "Interests": "Esse cillum deserunt fugiat deserunt irure ea esse deserunt quis exercitation velit do nisi reprehenderit.",
         "City": "Cliff",
         "Country": "British Indian Ocean Territory",
+	"PasswordHash": "lol",
         "Photo": [
             {
                 "Url": "https://randomuser.me/api/portraits/men/90.jpg",
@@ -131,6 +130,7 @@
         "Interests": "Aliquip proident pariatur excepteur incididunt irure et.",
         "City": "Welda",
         "Country": "Christmas Island",
+	"PasswordHash": "lol",
         "Photo": [
             {
                 "Url": "https://randomuser.me/api/portraits/men/87.jpg",
@@ -151,6 +151,7 @@
         "Interests": "Duis consectetur proident labore velit minim irure proident incididunt officia duis.",
         "City": "Clarence",
         "Country": "Burkina Faso",
+	"PasswordHash": "lol",
         "Photo": [
             {
                 "Url": "https://randomuser.me/api/portraits/men/57.jpg",
@@ -171,6 +172,7 @@
         "Interests": "Pariatur qui ut commodo laboris officia.",
         "City": "Herald",
         "Country": "Poland",
+	"PasswordHash": "lol",
         "Photo": [
             {
                 "Url": "https://randomuser.me/api/portraits/men/11.jpg",
@@ -191,12 +193,23 @@
         "Interests": "Labore consectetur labore ut nulla voluptate nulla quis labore tempor dolor laborum.",
         "City": "Lupton",
         "Country": "Luxembourg",
+	"PasswordHash": "lol",
         "Photo": [
-            {
-                "Url": "https://randomuser.me/api/portraits/men/93.jpg",
-                "IsMain": true, 
-                "IsApproved": true
-            }
+          {
+            "Url": "https://randomuser.me/api/portraits/men/93.jpg",
+            "IsMain": true,
+            "IsApproved": true
+          },
+          {
+            "Url": "https://randomuser.me/api/portraits/men/92.jpg",
+            "IsMain": false,
+            "IsApproved": true
+          },
+          {
+            "Url": "https://randomuser.me/api/portraits/men/91.jpg",
+            "IsMain": false,
+            "IsApproved": true
+          }
         ]
     }
 ]
